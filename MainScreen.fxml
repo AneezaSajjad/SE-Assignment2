@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1366.0" stylesheets="@../styles/MainScreen.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.atmmanagementsys.MainScreenController">
+   <children>
+      <Pane layoutX="72.0" layoutY="195.0" prefHeight="431.0" prefWidth="1232.0" stylesheets="@../styles/Styles.css">
+         <children>
+            <Button fx:id="user" mnemonicParsing="false" onAction="#LoadCustomerLogin" prefHeight="431.0" prefWidth="507.0" style="-fx-background-color: rgb(255,255,250,0.5);" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="admin" layoutX="725.0" mnemonicParsing="false" onAction="#LoadAdminLogin" prefHeight="431.0" prefWidth="507.0" style="-fx-background-color: rgb(255,255,250,0.5);" textFill="WHITE" />
+            <Label layoutX="186.0" layoutY="193.0" text="Customer">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="932.0" layoutY="193.0" text="Employee">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

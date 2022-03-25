@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1366.0" stylesheets="@../styles/AddCustomer.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.atmmanagementsys.AddEmployeeController">
+   <children>
+      <Pane layoutX="159.0" layoutY="110.0" prefHeight="559.0" prefWidth="1049.0" style="-fx-background-color: rgb(255,255,250,0.9); -fx-background-radius: 8;" stylesheets="@../styles/AdminPage.css">
+         <children>
+            <TextField fx:id="empFirstName" layoutX="225.0" layoutY="44.0" prefHeight="30.0" prefWidth="251.0" promptText="First Name" style="-fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="empCNIC" layoutX="735.0" layoutY="151.0" prefHeight="30.0" prefWidth="251.0" promptText="CNIC" style="-fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="empPhone" layoutX="735.0" layoutY="202.0" prefHeight="30.0" prefWidth="251.0" promptText="Phone" style="-fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <Button fx:id="add" focusTraversable="false" layoutX="475.0" layoutY="476.0" mnemonicParsing="false" onAction="#AddEmployee" prefHeight="40.0" prefWidth="113.0" styleClass="button1" text="ADD" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="Addempconfirm" layoutX="11.0" layoutY="525.0" prefHeight="30.0" prefWidth="1019.0" text="" textFill="#f50000">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="46.0" text="First Name">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="584.0" layoutY="154.0" text="CNIC">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="588.0" layoutY="366.0" text="Address">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="588.0" layoutY="205.0" text="Phone">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="empFatherName" layoutX="735.0" layoutY="254.0" prefHeight="30.0" prefWidth="251.0" promptText="Father Name" style="-fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="590.0" layoutY="257.0" text="Father Name">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="userimage" fitHeight="122.0" fitWidth="130.0" layoutX="70.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/usericon4.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="browse" layoutX="272.0" layoutY="476.0" mnemonicParsing="false" onAction="#ChooseFile" prefHeight="40.0" prefWidth="156.0" text="Upload Photo" />
+            <TextField fx:id="empLastName" layoutX="737.0" layoutY="43.0" prefHeight="36.0" prefWidth="251.0" promptText="Last Name" style="-fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="582.0" layoutY="46.0" prefHeight="30.0" prefWidth="102.0" text="Last Name">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="empAddress" focusTraversable="false" layoutX="737.0" layoutY="366.0" prefHeight="122.0" prefWidth="251.0" promptText="Address" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextArea>
+            <DatePicker fx:id="DOB" layoutX="224.0" layoutY="99.0" prefHeight="30.0" prefWidth="251.0" promptText="1/1/1970" />
+            <Label layoutX="69.0" layoutY="98.0" text="Date of Birth">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="584.0" layoutY="98.0" text="Gender">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="empGender" layoutX="737.0" layoutY="95.0" prefHeight="30.0" prefWidth="251.0" promptText="F | M | - ( not specified)" style="-fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="69.0" layoutY="154.0" prefHeight="30.0" prefWidth="75.0" text="Email">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="empEmail" layoutX="224.0" layoutY="151.0" prefHeight="30.0" prefWidth="251.0" promptText="Email" style="-fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="70.0" layoutY="257.0" text="Password">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="empPass" layoutX="224.0" layoutY="254.0" prefHeight="30.0" prefWidth="251.0" promptText="Password" style="-fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 22;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </PasswordField>
+            <CheckBox fx:id="ShowPasswordcbox" layoutX="225.0" layoutY="310.0" mnemonicParsing="false" onAction="#ShowPassword" prefHeight="17.0" prefWidth="156.0" text="Show Password" />
+            <Label layoutX="68.0" layoutY="205.0" text="User Name">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="UserName" layoutX="225.0" layoutY="202.0" prefHeight="30.0" prefWidth="251.0" promptText="Username" style="-fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane layoutX="558.0" layoutY="40.0" prefHeight="39.0" prefWidth="251.0">
+         <children>
+            <Label layoutX="-18.0" layoutY="-3.0" text="Create Employee Account" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="back" focusTraversable="false" layoutX="14.0" layoutY="31.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="40.0" prefWidth="113.0" styleClass="button1" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

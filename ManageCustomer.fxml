@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1366.0" style="-fx-background-color: #4c4177;" stylesheets="@../styles/AdminPage.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.atmmanagementsys.ManageCustomerController">
+    <children>
+      <Label fx:id="welcome" alignment="TOP_CENTER" layoutX="67.0" layoutY="31.0" prefHeight="35.0" prefWidth="211.0" text="Manage Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="67.0" layoutY="175.0" prefHeight="489.0" prefWidth="920.0">
+         <content>
+            <TableView fx:id="CustomerTable" prefHeight="489.0" prefWidth="1893.0">
+              <columns>
+                <TableColumn fx:id="cusID" editable="false" prefWidth="73.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="ID" />
+                <TableColumn fx:id="cusFirstName" editable="false" prefWidth="124.0" resizable="false" sortable="false" text="Name" />
+                  <TableColumn fx:id="cusUserName" editable="false" prefWidth="119.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="UserName" />
+                  <TableColumn fx:id="cusPassword" editable="false" prefWidth="119.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="Password" />
+                  <TableColumn fx:id="cusDOB" editable="false" prefWidth="107.0" resizable="false" sortable="false" text="Date of Birth" />
+                  <TableColumn fx:id="cusGender" editable="false" prefWidth="90.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="Gender" />
+                  <TableColumn fx:id="cusCNIC" editable="false" prefWidth="158.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="CNIC" />
+                  <TableColumn fx:id="cusFatherName" editable="false" prefWidth="151.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="Father Name" />
+                  <TableColumn fx:id="cusPhone" editable="false" prefWidth="139.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="Phone" />
+                  <TableColumn fx:id="cusEmail" editable="false" prefWidth="141.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="Email" />
+                  <TableColumn fx:id="cusAddress" editable="false" prefWidth="173.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="Address" />
+                  <TableColumn fx:id="Accountno" editable="false" prefWidth="144.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="Account Num" />
+                  <TableColumn fx:id="cusStatus" editable="false" prefWidth="82.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="Status" />
+                  <TableColumn fx:id="cusCreationDate" editable="false" prefWidth="128.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="Acc Create Date" />
+                  <TableColumn fx:id="cusCreationTime" editable="false" prefWidth="138.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="Acc Create Time" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Pane layoutX="1050.0" layoutY="175.0" prefHeight="275.0" prefWidth="253.0" style="-fx-background-color: rgb(255,255,255,0.7); -fx-background-radius: 20;">
+         <children>
+            <Button fx:id="AddCustomerbtn" layoutX="52.0" layoutY="29.0" mnemonicParsing="false" onAction="#AddCustomer" prefHeight="55.0" prefWidth="148.0" text="ADD CUSTOMER" />
+            <Button fx:id="EditCustomerbtn" layoutX="52.0" layoutY="114.0" mnemonicParsing="false" onAction="#EditCustomer" prefHeight="55.0" prefWidth="148.0" text="EDIT CUSTOMER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="DeleteCustomerbtn" layoutX="52.0" layoutY="192.0" mnemonicParsing="false" onAction="#DeleteCustomer" prefHeight="55.0" prefWidth="148.0" text="DELETE CUSTOMER" />
+         </children>
+      </Pane>
+      <Pane layoutX="67.0" layoutY="77.0" prefHeight="75.0" prefWidth="550.0">
+         <children>
+            <TextField fx:id="AccountNoField" layoutY="15.0" prefHeight="45.0" prefWidth="300.0" promptText="Account Number" style="-fx-background-radius: 22; -fx-border-color: #39b5ff; -fx-border-radius: 20; -fx-border-width: 2;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <Button fx:id="Searchbtn" layoutX="335.0" layoutY="18.0" mnemonicParsing="false" onAction="#SearchCustomer" prefHeight="40.0" prefWidth="85.0" text="Search" />
+            <Button fx:id="Loadbtn" layoutX="443.0" layoutY="18.0" mnemonicParsing="false" onAction="#LoadCustomerData" prefHeight="40.0" prefWidth="85.0" text="Load" />
+         </children>
+      </Pane>
+      <Pane layoutX="1120.0" layoutY="620.0" prefHeight="45.0" prefWidth="127.0">
+         <children>
+            <Button fx:id="back" focusTraversable="false" onAction="#backPressed" prefHeight="40.0" prefWidth="105.0" stylesheets="@../styles/Styles.css" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="35.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Label fx:id="confirmation" alignment="CENTER" layoutX="67.0" layoutY="665.0" prefHeight="35.0" prefWidth="920.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

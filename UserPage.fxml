@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1366.0" style="-fx-background-color: #00BCD4;" stylesheets="@../styles/UserPage1.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.atmmanagementsys.UserPageController">
+   <children>
+      <Pane layoutX="1219.0" layoutY="579.0" prefHeight="107.0" prefWidth="113.0" style="-fx-background-color: rgb(0,0,0,0.8); -fx-background-radius: 100;">
+         <children>
+            <ImageView fitHeight="107.0" fitWidth="113.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/logout.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="back" focusTraversable="false" layoutX="2.0" layoutY="-1.0" mnemonicParsing="false" onAction="#backPressed" opacity="0.0" prefHeight="107.0" prefWidth="113.0" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="473.0" layoutY="99.0" prefHeight="465.0" prefWidth="813.0" style="-fx-background-color: rgb(0,0,0,0.8); -fx-background-radius: 20;">
+         <children>
+            <Button fx:id="loanBtn" focusTraversable="false" layoutX="55.0" layoutY="155.0" mnemonicParsing="false" onAction="#loanPressed" prefHeight="25.0" prefWidth="250.0" text="View Loans" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="transactionButton" focusTraversable="false" layoutX="61.0" layoutY="340.0" mnemonicParsing="false" onAction="#transactionPressed" prefHeight="25.0" prefWidth="250.0" text="View Transactions" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="chngPass" focusTraversable="false" layoutX="467.0" layoutY="155.0" mnemonicParsing="false" onAction="#ChangePassword" prefHeight="25.0" prefWidth="250.0" text="Change Password" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="balanceTransferBtn" focusTraversable="false" layoutX="467.0" layoutY="337.0" mnemonicParsing="false" onAction="#balanceTransfer" prefHeight="25.0" prefWidth="250.0" text="Balance Transfer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+
+
+         </children>
+      </Pane>
+      <Pane layoutX="62.0" layoutY="76.0" prefHeight="511.0" prefWidth="336.0" style="-fx-background-color: rgb(0,0,0,0.9); -fx-background-radius: 50;">
+         <children>
+            <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="14.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/contact.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="38.0" layoutX="14.0" layoutY="454.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/email.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="phoneNumber" layoutX="92.0" layoutY="420.0" prefHeight="25.0" prefWidth="141.0" text="03026688384" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailAddress" layoutX="91.0" layoutY="457.0" prefHeight="25.0" prefWidth="238.0" text="hamzaijaz564@gmail.com" textFill="#f2f2f2">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="userName" layoutX="76.0" layoutY="211.0" prefHeight="66.0" prefWidth="238.0" text="Hamza Ijaz" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="userImage" fitHeight="168.0" fitWidth="198.0" layoutX="63.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="14.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/cnic.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="cnic" layoutX="92.0" layoutY="379.0" prefHeight="25.0" prefWidth="141.0" text="332022788915" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="15.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/transferBalance.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="accountBalance" layoutX="92.0" layoutY="335.0" prefHeight="25.0" prefWidth="141.0" text="332022788915" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
